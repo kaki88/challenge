@@ -2,6 +2,7 @@ body {
     width: 100%; 
     margin: 0; 
     border-top:20px; 
+     margin-top: 20px;
 }
 
 #liste_heros {
@@ -12,10 +13,7 @@ body {
     background-size: cover; 
 }
 
-#liste_armes { 
-    background-color: blue; 
 
-}
 #heros_1 {
     position: absolute;
     background-color: dimgray;
@@ -91,4 +89,159 @@ body {
     right:40%;
     top:20%;
     background-color:black; 
+}
+
+#liste_armes{	
+   
+				position: relative;
+				width: 60%;
+				height: 635px;
+				bottom :2px;
+				margin: auto;
+				border: 1px solid;
+				border-radius: 2em;
+				background-color: white;
+    font-size: 30px;
+}	
+.nomarmes{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+#armes_1{
+			position: relative;
+			width:  250px;
+			height: 90px;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_2{
+			position: relative;
+			width:  250px;
+			height: 90px;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_3{
+			position: relative;
+			width:  250px;
+			height: 90px;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_4{
+			position: relative;
+			width:  250px;
+			height: 90px;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_5{
+			position: relative;
+			width:  250px;
+			height: 90px;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_6{
+			position: relative;
+			width:  250px;
+			height: 90px;		
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_7{
+			position: relative;
+			width:  250px;
+			height: 90px;
+			border-right: 1px solid black;
+			
+}
+
+
+#armes_1d{
+			position: relative;
+			left:  550px;
+			bottom: 663px;
+			width:  250px;
+			height: 90px;
+			border-left: 1px solid black;
+			border-bottom: 1px solid black;
+
+}
+
+#armes_2d{	
+			position: relative;
+			left:  550px;
+			bottom: 663px;
+			width:  250px;
+			height: 90px;
+			border-left: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_3d{	
+			position: relative;
+			left:  550px;
+			bottom: 663px;
+			width:  250px;
+			height: 90px;
+			border-left: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_4d{
+			position: relative;
+			left:  550px;
+			bottom: 663px;
+			width:  250px;
+			height: 90px;
+			border-left: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_5d{
+			position: relative;
+			left:  550px;
+			bottom: 663px;
+			width:  250px;
+			height: 90px;
+			border-left: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_6d{
+			position: relative;
+			left:  550px;
+			bottom: 663px;
+			width:  250px;
+			height: 90px;
+			border-left: 1px solid black;
+			border-bottom: 1px solid black;
+}
+
+#armes_7d{
+			position: relative;
+			left:  550px;
+			bottom: 663px;
+			width:  250px;
+			height: 90px;
+			border-left: 1px solid black;
+			
+}
+
+.afficher_arme {
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    margin-top: -600px;
+    margin-left: 300px;
+}
+#afficher_arme{
+    width: 70%;
 }

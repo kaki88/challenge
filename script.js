@@ -73,7 +73,7 @@ function valider_armes() {
         document.getElementById('versus').classList.remove('a_effacer');
         document.getElementById("chargement_"+heros[0]).classList.remove('a_effacer');
         document.getElementById("versus_"+heros_liste[0]).classList.remove('a_effacer');
-        
+        document.body.style.backgroundImage = "url('fond_arme.png')";
         melanger(armes_cpu);
         console.log(armes_cpu);
         melanger(background);
