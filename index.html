@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+</head>
+<style>
+    .style {
+        float: left;
+        border: 1px solid black;
+        width: 100px;
+        height: 200px;
+        background-color: aqua;
+    }
+    
+    .a_effacer {
+        display: none;
+    }
+    
+    .score_j1 {
+        display: inline-block;
+        height: 100px;
+        width: 300px;
+        background-color: coral;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .score_cpu {
+        display: inline-block;
+        height: 100px;
+        width: 300px;
+        background-color: forestgreen;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    #perdu {
+        height: 100px;
+        width: 300px;
+        background-color: grey;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        position: absolute;
+        float: right;
+        right: 0px;
+    }
+    
+    #gagne {
+        height: 100px;
+        width: 300px;
+        background-color: grey;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        position: absolute;
+        float: right;
+        right: 0px;
+    }
+    
+    .orange {
+        background-color: orange;
+    }
+    
+    .vert {
+        background-color: green;
+    }
+    
+    .bleu {
+        background-color: blue;
+    }
+    
+    .rouge {
+        background-color: red;
+    }
+    
+    .jaune {
+        background-color: yellow;
+    }
+
+</style>
+
+
+
+
+
+<body onload="init()">
+
+
+
+    <div id="liste_heros">
+        <div class="style" id="heros_1" onclick="select(1)"><img src="../img/MrMAc.png" width="100px" height="100px"></div>
+        <div class="style" id="heros_2" onclick="select(2)"><img src="../img/Saiit.png" width="100px" height="100px"></div>
+        <div class="style" id="heros_3" onclick="select(3)"><img src="../img/Oizo.png" width="100px" height="100px"></div>
+        <div class="style" id="heros_4" onclick="select(4)"><img src="../img/Niinja.png" width="100px" height="100px"> </div>
+        <div class="style" id="heros_5" onclick="select(5)"><img src="#" width="100px" height="100px"> </div>
+        <button id="bt_heros" onclick="valider_heros()">valider</button>
+    </div>
+
+
+
+    <div id="liste_armes" class="a_effacer">
+        <h1 id="arme_diff" class="a_effacer rouge">Sélectionner deux armes différentes</h1>
+        <div class="style" id="armes_1" onclick="select_armes(1)">arme 1</div>
+        <div class="style" id="armes_2" onclick="select_armes(2)">arme 2</div>
+        <div class="style" id="armes_3" onclick="select_armes(3)">arme 3</div>
+        <div class="style" id="armes_4" onclick="select_armes(4)">arme 4</div>
+        <div class="style" id="armes_5" onclick="select_armes(5)">arme 5</div>
+        <div class="style" id="armes_6" onclick="select_armes(6)">arme 6</div>
+        <div class="style" id="armes_7" onclick="select_armes(7)">arme 7</div>
+        <button id="bt_armes" onclick="valider_armes();">valider</button>
+    </div>
+    <div id="versus" class="a_effacer">
+        <div class="style a_effacer orange" id="chargement_heros_1">heros 1</div>
+        <div class="style a_effacer jaune" id="chargement_heros_2">heros 2</div>
+        <div class="style a_effacer rouge" id="chargement_heros_3">heros 3</div>
+        <div class="style a_effacer vert" id="chargement_heros_4">heros 4</div>
+        <div class="style a_effacer bleu" id="chargement_heros_5">heros 5</div>
+        <div class="style a_effacer orange" id="versus_heros_1">heros 1</div>
+        <div class="style a_effacer jaune" id="versus_heros_2">heros 2</div>
+        <div class="style a_effacer rouge" id="versus_heros_3">heros 3</div>
+        <div class="style a_effacer vert" id="versus_heros_4">heros 4</div>
+        <div class="style a_effacer bleu" id="versus_heros_5">heros 5</div>
+
+    </div>
+
+    <div id="score" class="a_effacer">
+        <div id="score_j1" class="score_j1">.</div>
+        <div id="score_cpu" class="score_cpu">.</div>
+    </div>
+
+    <div id="combat" class="a_effacer">
+        <div class="style a_effacer orange" id="combat_cpu_1"></div>
+        <div class="style a_effacer jaune" id="combat_cpu_2"></div>
+        <div class="style a_effacer rouge" id="combat_cpu_3"></div>
+        <div class="style a_effacer vert" id="combat_cpu_4"></div>
+        <div class="style a_effacer bleu" id="combat_cpu_5"></div>
+
+        <div class="style a_effacer orange" id="combat_heros_1"></div>
+        <div class="style a_effacer jaune" id="combat_heros_2"></div>
+        <div class="style a_effacer rouge" id="combat_heros_3"></div>
+        <div class="style a_effacer vert" id="combat_heros_4"></div>
+        <div class="style a_effacer bleu" id="combat_heros_5"></div>
+        <div id="total_arme_joueur"></div>
+        <div id="total_arme_cpu"></div>
+        <button id="reflechir" onclick="reflechir()">réfléchir</button>
+        <button id="coder">coder</button>
+        <button id="manger">manger</button>
+        <button id="dormir">dormir</button>
+    </div>
+
+    <div id="perdu" class="a_effacer">
+        <div>GAME OVER</div>
+        <div>
+            <button id="rejouer">rejouer une partie</button>
+        </div>
+    </div>
+    <div id="gagne" class="a_effacer">
+        <div id="msg_gagne">GAGNE</div>
+        <div>
+            <button id="suivant" onclick="next()">stage suivant</button>
+        </div>
+    </div>
+
+
+    <div id="credit" class="a_effaceer">Fin de partie 
+    <br />
+        <button id="fuck" onclick="rejouer()">Rejouer</button>
+    </div>
+
+</body>
+
+</html>
