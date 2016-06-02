@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js"></script>
 </head>
+<audio preload="auto">
+    <source src="img/sons/arme.ogg" type="audio/ogg" />
+</audio>
+
+
+
 <style>
- 
-    
     .a_effacer {
         display: none;
     }
@@ -76,7 +80,6 @@
     .jaune {
         background-color: yellow;
     }
-
 </style>
 
 
@@ -96,33 +99,73 @@
         <button id="bt_heros" onclick="valider_heros()">valider</button>
     </div>
 
+    <table id="liste_armes" class="a_effacer">
+        <tr>
+            <td colspan="2" id="titre_armes">
+                <span class="titre_armes_text">CHOIX DES 2 ARMES</span
+</td>
+</tr>  
+<tr>
+<td class="style cl-effect-1" id="armes_1" onclick="select_armes(1);memorise1()"
+    onmouseover="document.getElementById('afficher_arme').src='img/ARME/mulet.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
+    <span class="nomarmes"><a class="cl-effect-1">Mulet</a></span>
 
+            </td>
+            <td class="afficher_arme" rowspan="7">
+                <div class="centrer_img">
+                    <img id="afficher_arme" src="img/blank.png"></td>
+            </div>
+        </tr>
+        <tr>
+            <td class="style cl-effect-1" id="armes_2" onclick="select_armes(2);memorise2()" onmouseover="document.getElementById('afficher_arme').src='img/ARME/tardis.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
+                <span class="nomarmes"><a class="cl-effect-1">Tardis</a></span>
+            </td>
+        </tr>
 
-    <div id="liste_armes" class="a_effacer">
-        <h1 id="arme_diff" class="a_effacer rouge">Sélectionner deux armes différentes</h1>
-        <div class="style" id="armes_1" onclick="select_armes(1)" onmouseover="document.getElementById('afficher_arme').src='img/ARME/mulet.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
-            <span class="nomarmes">Mulet</span></div>
-        <div class="style" id="armes_2" onclick="select_armes(2)"
-             onmouseover="document.getElementById('afficher_arme').src='img/ARME/tardis.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
-            <span class="nomarmes">Tardis</span></div>
-        <div class="style" id="armes_3" onclick="select_armes(3)"
-             onmouseover="document.getElementById('afficher_arme').src='img/ARME/ballon.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
-            <span class="nomarmes">Ballon</span></div>
-        <div class="style" id="armes_4" onclick="select_armes(4)"
-             onmouseover="document.getElementById('afficher_arme').src='img/ARME/montgolfiere.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
-            <span class="nomarmes">Montgolfière</span></div>
-        <div class="style" id="armes_5" onclick="select_armes(5)"
-             onmouseover="document.getElementById('afficher_arme').src='img/ARME/triforce.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
-            <span class="nomarmes">Triforce</span></div>
-        <div class="style" id="armes_6" onclick="select_armes(6)"
-             onmouseover="document.getElementById('afficher_arme').src='img/ARME/lunettes.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
-            <span class="nomarmes">Lunette</span></div>
-        <div class="style" id="armes_7" onclick="select_armes(7)"
-             onmouseover="document.getElementById('afficher_arme').src='img/ARME/clef3.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
-            <span class="nomarmes">Clef</span></div>
-        <div class="afficher_arme" ><img id="afficher_arme" src="img/blank.png"></div>
-        <button id="bt_armes" onclick="valider_armes();">valider</button>
+        </tr>
+        <tr>
+            <td class="style cl-effect-1" id="armes_3" onclick="select_armes(3);memorise3()" onmouseover="document.getElementById('afficher_arme').src='img/ARME/ballon.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
+                <span class="nomarmes"><a class="cl-effect-1">Ballon</a></span>
+            </td>
+        </tr>
+
+        </tr>
+        <tr>
+            <td class="style cl-effect-1" id="armes_4" onclick="select_armes(4);memorise4()" onmouseover="document.getElementById('afficher_arme').src='img/ARME/montgolfiere.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
+                <span class="nomarmes"><a class="cl-effect-1">Montgolfière</a></span>
+            </td>
+        </tr>
+
+        </tr>
+        <tr>
+            <td class="style cl-effect-1" id="armes_5" onclick="select_armes(5);memorise5()" onmouseover="document.getElementById('afficher_arme').src='img/ARME/triforce.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
+                <span class="nomarmes"><a class="cl-effect-1">Triforce</a></span>
+            </td>
+        </tr>
+
+        </tr>
+        <tr>
+            <td class="style cl-effect-1" id="armes_6" onclick="select_armes(6);memorise6()" onmouseover="document.getElementById('afficher_arme').src='img/ARME/lunettes.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
+                <span class="nomarmes"><a class="cl-effect-1">Lunette</a></span>
+            </td>
+        </tr>
+
+        </tr>
+        <tr>
+            <td class="style cl-effect-1" id="armes_7" onclick="select_armes(7);memorise7()" onmouseover="document.getElementById('afficher_arme').src='img/ARME/clef3.png'" onmouseout="document.getElementById('afficher_arme').src='img/blank.png';">
+                <span class="nomarmes"><a class="cl-effect-1">Clef</a></span>
+            </td>
+        </tr>
+    </table>
+
+    <div id="bouton_armes" class="a_effacer">
+        <a href="#" id="bt_armes" onclick="valider_armes();zik()">
+            <span>Prêt au combat</span>
+        </a>
+
     </div>
+
+
     <div id="versus" class="a_effacer">
         <div class="style a_effacer orange" id="chargement_heros_1">heros 1</div>
         <div class="style a_effacer jaune" id="chargement_heros_2">heros 2</div>
@@ -171,15 +214,44 @@
     <div id="gagne" class="a_effacer">
         <div id="msg_gagne">GAGNE</div>
         <div>
-            <button id="suivant" onclick="next()">stage suivant</button>
+            <button id="suivant" onclick="next();zik()">stage suivant</button>
         </div>
     </div>
 
 
-    <div id="credit" class="a_effacer">Fin de partie 
-    <br />
+    <table id="credit" class="a_effacer">
+        <tr>
+            <td colspan="3">Félicitations !!!</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Vous</td>
+            <td>Adversaire</td>
+        </tr>
+        <tr>
+            <td>Stage 1</td>
+            <td id="stage1">score</td>
+            <td id="stage1cpu">score</td>
+        </tr>
+        <tr>
+            <td>Stage 2</td>
+            <td>score</td>
+            <td>score</td>
+        </tr>
+        <tr>
+            <td>Stage 3</td>
+            <td>score</td>
+            <td>score</td>
+        </tr>
+        <tr>
+            <td>Stage 4</td>
+            <td>score</td>
+            <td>score</td>
+        </tr>
+
+        <br />
         <button id="fuck" onclick="rejouer()">Rejouer</button>
-    </div>
+        </div>
 
 </body>
 

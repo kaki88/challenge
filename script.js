@@ -11,6 +11,14 @@ function init() {
     bt_manger = document.getElementById('manger');
     bt_dormir = document.getElementById('dormir');
     bt_perdu = document.getElementById('perdu');
+    stage_1 = [];
+    stage_1_cpu = [];
+    stage_2 = [];
+    stage_2_cpu = [];
+    stage_3 = [];
+    stage_3_cpu = [];
+    stage_4 = [];
+    stage_4_cpu = [];
 }
 
 
@@ -50,10 +58,12 @@ function valider_heros() {
     }
     else {
         heros_liste.remove(heros[0]);
-
         console.log(heros_liste);
         document.getElementById('liste_armes').classList.remove('a_effacer');
     document.getElementById('liste_heros').classList.add('a_effacer');
+        document.body.style.backgroundImage = "url('img/fond-arme.jpg')";
+        document.body.style.backgroundSize = "100vh 100vh";
+        document.getElementById('bouton_armes').classList.remove('a_effacer');
         }
 }
 
@@ -67,13 +77,13 @@ function select_armes(non) {
 function valider_armes() {
      melanger(heros_liste);
     if (armes[0] == "aucune" || armes[1] == "aucune" || armes[0] == armes[1]) {
-        document.getElementById('arme_diff').classList.remove('a_effacer');
+        /*document.getElementById('arme_diff').classList.remove('a_effacer');*/
     } else {
         document.getElementById('liste_armes').classList.add('a_effacer');
         document.getElementById('versus').classList.remove('a_effacer');
         document.getElementById("chargement_"+heros[0]).classList.remove('a_effacer');
         document.getElementById("versus_"+heros_liste[0]).classList.remove('a_effacer');
-        document.body.style.backgroundImage = "url('fond_arme.png')";
+        document.getElementById('bouton_armes').classList.add('a_effacer');
         melanger(armes_cpu);
         console.log(armes_cpu);
         melanger(background);
@@ -324,12 +334,32 @@ function calcul_des_points() {
     if (score_joueur < score_cpu) {
         bt_perdu.classList.remove('a_effacer');
     } else {
+        
         document.getElementById('gagne').classList.remove('a_effacer');
         document.getElementById('msg_gagne').innerHTML = 'Stage '+niveau+' terminé'
+        
     }
 }
 //-----------------------------------------------------------------------------STAGE SUIVANT
 function next(){
+    
+    if (niveau == 1) {
+    stage_1.push(score_joueur);
+    stage_1_cpu.push(score_cpu);
+    }
+     if (niveau == 2) {
+    stage_2.push(score_joueur);
+    stage_2_cpu.push(score_cpu);
+    }
+     if (niveau == 3) {
+    stage_3.push(score_joueur);
+    stage_3_cpu.push(score_cpu);
+    }
+     if (niveau == 4) {
+    stage_4.push(score_joueur);
+    stage_4_cpu.push(score_cpu);
+    }
+        
     niveau++;
     if (niveau < 5) {
     if (score_joueur < score_cpu) {
@@ -362,8 +392,13 @@ function next(){
     document.getElementById('score').classList.add('a_effacer');
     document.getElementById('combat').classList.add('a_effacer');
     document.getElementById('credit').classList.remove('a_effacer');
+        document.body.style.backgroundImage = "url('img/fin.png')";
+        document.body.style.backgroundSize = "100vh 100vh";
     console.log(niveau);
         
+        
+        document.getElementById('stage1').innerHTML = stage_1[0];
+        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[0];
         }   
     }
 
@@ -371,3 +406,37 @@ function next(){
 function rejouer(){
 location.reload();   
 }
+
+
+//-----------------------------------------------------------------------------BOUTON
+function zik() {
+    if (armes[0] == "aucune" || armes[1] == "aucune" || armes[0] == armes[1]) {
+    }
+    else {
+        document.getElementsByTagName('audio')[0].play();
+    }
+}
+
+function memorise1() {
+        document.getElementById('armes_1').classList.toggle('memorise_arme');
+}
+function memorise2() {
+        document.getElementById('armes_2').classList.toggle('memorise_arme');
+}
+function memorise3() {
+        document.getElementById('armes_3').classList.toggle('memorise_arme');
+}
+function memorise4() {
+        document.getElementById('armes_4').classList.toggle('memorise_arme');
+}
+function memorise5() {
+        document.getElementById('armes_5').classList.toggle('memorise_arme');
+}
+function memorise6() {
+        document.getElementById('armes_6').classList.toggle('memorise_arme');
+}
+function memorise7() {
+        document.getElementById('armes_7').classList.toggle('memorise_arme');
+}
+
+ 

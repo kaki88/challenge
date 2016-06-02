@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
 body { 
     width: 100%; 
     margin: 0; 
@@ -92,156 +94,277 @@ body {
 }
 
 #liste_armes{	
-   
+   font-family: 'Press Start 2P', cursive;
 				position: relative;
 				width: 60%;
-				height: 635px;
+				height: 70vh;
 				bottom :2px;
 				margin: auto;
-				border: 1px solid;
-				border-radius: 2em;
-				background-color: white;
-    font-size: 30px;
+				border-radius: 10px;
+				background-color:darkgray;
+    font-size: 13px;
 }	
 .nomarmes{
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 20px;
+ 
 }
-#armes_1{
+
+#titre_armes
+{
 			position: relative;
-			width:  250px;
-			height: 90px;
+			width:  100%;
+			height: 50px;
+			border-bottom: 1px solid black;
+    background-color: #FF2C2C;
+    border-top-right-radius: 10px;
+     border-top-left-radius: 10px;
+}
+
+.titre_armes_text{
+    position: relative;
+    width:  100%;
+    margin: 0 auto;
+    text-align:center;
+    display: block;
+}
+    
+#armes_1{
+			width:  50vh;
+			
 			border-right: 1px solid black;
 			border-bottom: 1px solid black;
+    background-color: #BEC7BC;
+}
+#armes_1:hover{
+			 
+			
+			outline: 2px solid black;
+    background-color:cadetblue;
 }
 
 #armes_2{
 			position: relative;
-			width:  250px;
-			height: 90px;
+			 
+			
 			border-right: 1px solid black;
 			border-bottom: 1px solid black;
+     background-color: #BEC7BC;
 }
-
+#armes_2:hover{
+			 
+			
+			outline: 2px solid black;
+    background-color:cadetblue;
+}
 #armes_3{
 			position: relative;
-			width:  250px;
-			height: 90px;
+			 
+			
 			border-right: 1px solid black;
 			border-bottom: 1px solid black;
+     background-color: #BEC7BC;
 }
-
+#armes_3:hover{
+			 
+			
+			outline: 2px solid black;
+    background-color:cadetblue;
+}
 #armes_4{
 			position: relative;
-			width:  250px;
-			height: 90px;
+			 
+			
 			border-right: 1px solid black;
 			border-bottom: 1px solid black;
+     background-color: #BEC7BC;
 }
-
+#armes_4:hover{
+			 
+			
+			outline: 2px solid black;
+    background-color:cadetblue;
+}
 #armes_5{
 			position: relative;
-			width:  250px;
-			height: 90px;
+			 
+			
 			border-right: 1px solid black;
 			border-bottom: 1px solid black;
+     background-color: #BEC7BC;
 }
-
+#armes_5:hover{
+			 
+			
+			outline: 2px solid black;
+    background-color:cadetblue;
+}
 #armes_6{
 			position: relative;
-			width:  250px;
-			height: 90px;		
+			 
+					
 			border-right: 1px solid black;
 			border-bottom: 1px solid black;
+     background-color: #BEC7BC;
 }
-
+#armes_6:hover{
+			 
+			
+			outline: 2px solid black;
+    background-color:cadetblue;
+}
 #armes_7{
 			position: relative;
-			width:  250px;
-			height: 90px;
+			 
+			
 			border-right: 1px solid black;
+     background-color: #BEC7BC;
+			
+}
+#armes_7:hover{
+			position: relative;
+			
+			outline: 2px solid black;
+    background-color:cadetblue;
 			
 }
 
 
-#armes_1d{
-			position: relative;
-			left:  550px;
-			bottom: 663px;
-			width:  250px;
-			height: 90px;
-			border-left: 1px solid black;
-			border-bottom: 1px solid black;
-
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Pacifico'), url('http://themes.googleusercontent.com/font?kit=fKnfV28XkldRW297cFLeqfesZW2xOQ-xsNqO47m55DA') format('truetype');
 }
 
-#armes_2d{	
-			position: relative;
-			left:  550px;
-			bottom: 663px;
-			width:  250px;
-			height: 90px;
-			border-left: 1px solid black;
-			border-bottom: 1px solid black;
+
+#bt_armes {
+    margin: auto;
+  
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow:    0 8px 0 green, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 green, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 greend, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    font-size: 25px;
+    color: #fff;
 }
 
-#armes_3d{	
-			position: relative;
-			left:  550px;
-			bottom: 663px;
-			width:  250px;
-			height: 90px;
-			border-left: 1px solid black;
-			border-bottom: 1px solid black;
+#bt_armes span {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: green;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(338, 90%, 80%, .8)), to(hsla(338, 90%, 70%, .2)));
+    background-image: -webkit-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    background-image: -moz-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    background-image: -o-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(175, 49, 95, .7);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
 }
 
-#armes_4d{
-			position: relative;
-			left:  550px;
-			bottom: 663px;
-			width:  250px;
-			height: 90px;
-			border-left: 1px solid black;
-			border-bottom: 1px solid black;
+#bt_armes:hover span {
+    background-color: green;
+    color: black;
+    text-shadow: 0 -8px 20px rgba(175, 49, 95, .9), 0 0 20px rgba(255, 255, 255, .8);
 }
 
-#armes_5d{
-			position: relative;
-			left:  550px;
-			bottom: 663px;
-			width:  250px;
-			height: 90px;
-			border-left: 1px solid black;
-			border-bottom: 1px solid black;
+#bt_armes:active, #bt_armes:focus {
+    -webkit-box-shadow:    0 8px 0 green, 0 12px 10px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 green, 0 12px 10px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 green, 0 12px 10px rgba(0, 0, 0, .3);
 }
 
-#armes_6d{
-			position: relative;
-			left:  550px;
-			bottom: 663px;
-			width:  250px;
-			height: 90px;
-			border-left: 1px solid black;
-			border-bottom: 1px solid black;
+#bt_armes:active span {
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+#bouton_armes{
+    margin: auto;
+    text-align: center; 
+      margin-top: 30px;
+}
+.cl-effect-1{
+    display: block;
+    height: 100%;
+}
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
 }
 
-#armes_7d{
-			position: relative;
-			left:  550px;
-			bottom: 663px;
-			width:  250px;
-			height: 90px;
-			border-left: 1px solid black;
-			
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
 }
 
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+.memorise_arme{
+			outline: 2px solid black !important;
+    background-color:cadetblue !important;
+    background-image: url(img/check.png) !important;
+    background-repeat: no-repeat;
+     background-size: cover !important;
+}
 .afficher_arme {
-    position: absolute;
-    width: 70%;
-    height: 90%;
-    margin-top: -600px;
-    margin-left: 300px;
+    width:  80vh;
+    height: 40vh;
+    background-image: url(img/fond-img-arme.jpg);
+    background-size: cover;
 }
-#afficher_arme{
-    width: 70%;
+#afficher_arme {
+    position: absolute;
+    width: 33%;
+}
+.centrer_img {
+    margin-left: 100px;
+    margin-top: -100px;
+}
+
+
+#credit {
+    width: 80vh; 
+    margin: auto; 
+    background-color: white;
 }
