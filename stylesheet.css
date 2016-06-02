@@ -441,10 +441,12 @@ body {
     }
 
     .score_j1 {
+        position: absolute;
+        top:0;
       margin-top: 2%;
       font-family: 'Press Start 2P', cursive;
       color: white;
-      margin-left: 4%;
+    left: 30px;
       display: inline-block;
        height: 100px;
         width: 300px;
@@ -454,10 +456,12 @@ body {
     }
 
     .score_cpu {
+         position: absolute;
+        top:0;
       margin-top: 2%;
       font-family: 'Press Start 2P', cursive;
       color: white;
-      margin-left: 55%;
+      right: 30px;
         display: inline-block;
         height: 100px;
         width: 300px;
@@ -468,15 +472,17 @@ body {
 
     #perdu {
       font-family: 'Press Start 2P', cursive;
-        height: 100px;
-        width: 300px;
+        height: 150px;
+        width: 400px;
         background-color: grey;
-        font-size: 26px;
+        font-size: 20px;
         text-align: center;
         color: white;
         position: absolute;
-        float: right;
+        
         right: 0px;
+        margin: auto;
+        top: 50px;
     }
 
     #gagne {
@@ -485,12 +491,13 @@ body {
         height: 100px;
         width: 300px;
         background-color: grey;
-        font-size: 26px;
+        font-size: 20px;
         text-align: center;
         color: white;
         position: absolute;
-        float: right;
-        right: 0px;
+        margin: auto;
+        top: 150px;
+        right: 42%;
     }
 
 

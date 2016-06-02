@@ -332,7 +332,7 @@ function calcul_des_points() {
     document.getElementById('score').classList.remove('a_effacer');
     score_cpu = (weapon_1_cpu + weapon_2_cpu) * 7500;
     document.getElementById('score_cpu').innerHTML = 'cpu :<br/>' + score_cpu;
-    score_joueur = (weapon_1 + weapon_2) * (1500000 - score_temps);
+    score_joueur = (weapon_1 + weapon_2) * (15000 - score_temps);
     if (score_joueur < 0) score_joueur = 0;
     document.getElementById('score_j1').innerHTML = 'joueur :<br/>' + score_joueur;
     console.log("arme 1 du joueur =", weapon_1, "arme 2 du joueur =", weapon_2);
@@ -406,14 +406,12 @@ function next(){
         
         document.getElementById('stage1').innerHTML = stage_1[0];
         document.getElementById('stage1cpu').innerHTML = stage_1_cpu[0];
-        document.getElementById('stage1').innerHTML = stage_1[1];
-        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[1];
-        document.getElementById('stage1').innerHTML = stage_1[2];
-        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[2];
-        document.getElementById('stage1').innerHTML = stage_1[3];
-        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[3];
-        document.getElementById('stage1').innerHTML = stage_1[4];
-        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[4];
+        document.getElementById('stage2').innerHTML = stage_2[0];
+        document.getElementById('stage2cpu').innerHTML = stage_2_cpu[0];
+        document.getElementById('stage3').innerHTML = stage_3[0];
+        document.getElementById('stage3cpu').innerHTML = stage_3_cpu[0];
+        document.getElementById('stage4').innerHTML = stage_4[0];
+        document.getElementById('stage4cpu').innerHTML = stage_4_cpu[0];
         
     
         }   
