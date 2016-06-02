@@ -14,73 +14,7 @@
 
 
 
-<style>
-    .a_effacer {
-        display: none;
-    }
-    
-    .score_j1 {
-        display: inline-block;
-        height: 100px;
-        width: 300px;
-        background-color: coral;
-        font-size: 30px;
-        text-align: center;
-    }
-    
-    .score_cpu {
-        display: inline-block;
-        height: 100px;
-        width: 300px;
-        background-color: forestgreen;
-        font-size: 30px;
-        text-align: center;
-    }
-    
-    #perdu {
-        height: 100px;
-        width: 300px;
-        background-color: grey;
-        font-size: 30px;
-        text-align: center;
-        color: white;
-        position: absolute;
-        float: right;
-        right: 0px;
-    }
-    
-    #gagne {
-        height: 100px;
-        width: 300px;
-        background-color: grey;
-        font-size: 30px;
-        text-align: center;
-        color: white;
-        position: absolute;
-        float: right;
-        right: 0px;
-    }
-    
-    .orange {
-        background-color: orange;
-    }
-    
-    .vert {
-        background-color: green;
-    }
-    
-    .bleu {
-        background-color: blue;
-    }
-    
-    .rouge {
-        background-color: red;
-    }
-    
-    .jaune {
-        background-color: yellow;
-    }
-</style>
+
 
 
 
@@ -88,17 +22,50 @@
 
 <body onload="init()">
 
+      <div class="container">
+<div id="ch_heros">CHOIX DU HEROS</div>
 
-
+    
     <div id="liste_heros">
-        <div class="style" id="heros_1" onclick="select(1)"><img src="img/MrMAc.png" width="100px" height="100px"></div>
-        <div class="style" id="heros_2" onclick="select(2)"><img src="img/Saiit.png" width="100px" height="100px"></div>
-        <div class="style" id="heros_3" onclick="select(3)"><img src="img/Oizo.png" width="100px" height="100px"></div>
-        <div class="style" id="heros_4" onclick="select(4)"><img src="img/Niinja.png" width="100px" height="100px"> </div>
-        <div class="style" id="heros_5" onclick="select(5)"><img src="#" width="100px" height="100px"> </div>
-        <button id="bt_heros" onclick="valider_heros()">valider</button>
+        <div class="" id="heros_1" onclick="select(1)"
+             onmouseover="document.getElementById('afficher_hero').src='img/MrMAc.png'"
+                onclick="document.getElementById('afficher_hero').src='MrMAc/blank.png';"
+             >
+             <img src="img/MrMAc.png" width="100px" height="100px"></div>
+        <div class="" id="heros_2" onclick="select(2)"
+              onmouseover="document.getElementById('afficher_hero').src='img/Saiit.png'"
+               onclick="document.getElementById('afficher_hero').src='MrMAc/blank.png';"
+             >
+            <img src="img/Saiit.png" width="100px" height="100px"></div>
+        <div class="" id="heros_3" onclick="select(3)"
+              onmouseover="document.getElementById('afficher_hero').src='img/Oizo.png'"
+               onclick="document.getElementById('afficher_hero').src='MrMAc/blank.png';"
+             >
+            <img src="img/Oizo.png" width="100px" height="100px"></div>
+        <div class="" id="heros_4" onclick="select(4)"
+              onmouseover="document.getElementById('afficher_hero').src='img/Niinja.png'"
+               onclick="document.getElementById('afficher_hero').src='MrMAc/blank.png';"
+             >
+            <img src="img/Niinja.png" width="100px" height="100px"> </div>
+        <div class="" id="heros_5" onclick="select(5)"
+              onmouseover="document.getElementById('afficher_hero').src='img/MrBacon-perso.png'"
+               onclick="document.getElementById('afficher_hero').src='MrMAc/blank.png';"
+             >
+            <img src="img/MrBacon-perso.png" width="100px" height="100px"> </div>
+        
+        
+        
+        <div id="cont_img_heros">
+            <img id="afficher_hero" src="img/blank.png">
+             </div>
+            
+            
+        <button class="style_button" id="bt_heros" onclick="valider_heros()">valider</button>
     </div>
-
+  </div>
+    
+    
+    
     <table id="liste_armes" class="a_effacer">
         <tr>
             <td colspan="2" id="titre_armes">
@@ -159,50 +126,64 @@
     </table>
 
     <div id="bouton_armes" class="a_effacer">
-        <a href="#" id="bt_armes" onclick="valider_armes();zik()">
+        <a href="#" id="bt_armes" class="bt_armes" onclick="valider_armes();zik()">
             <span>Prêt au combat</span>
         </a>
 
     </div>
 
 
-    <div id="versus" class="a_effacer">
-        <div class="style a_effacer orange" id="chargement_heros_1">heros 1</div>
-        <div class="style a_effacer jaune" id="chargement_heros_2">heros 2</div>
-        <div class="style a_effacer rouge" id="chargement_heros_3">heros 3</div>
-        <div class="style a_effacer vert" id="chargement_heros_4">heros 4</div>
-        <div class="style a_effacer bleu" id="chargement_heros_5">heros 5</div>
-        <div class="style a_effacer orange" id="versus_heros_1">heros 1</div>
-        <div class="style a_effacer jaune" id="versus_heros_2">heros 2</div>
-        <div class="style a_effacer rouge" id="versus_heros_3">heros 3</div>
-        <div class="style a_effacer vert" id="versus_heros_4">heros 4</div>
-        <div class="style a_effacer bleu" id="versus_heros_5">heros 5</div>
+   
+          <div id="versus" style="display : none;"> 
+            
+            <div class="versuus"> <img class ="VS" src="versus.png" width="250px" height="250px"> </div>
+            
+            <div id="versus_1"> 
+        <div class="hero_d a_effacer" id="chargement_heros_1"><img src="img/MrMAc.png" width="100%" height="100%"></div>
+        <div class="hero_d a_effacer" id="chargement_heros_2"><img src="img/Saiit.png" width="100%" height="100%"></div>
+        <div class="hero_d a_effacer" id="chargement_heros_3"><img src="img/Oizo.png" width="100%" height="100%"></div>
+        <div class="hero_d a_effacer" id="chargement_heros_4"><img src="img/Niinja.png" width="100%" height="100%"></div>
+        <div class="hero_d a_effacer" id="chargement_heros_5"><img src="MrBacon-perso.png" width="100%" height="100%"></div>            </div>
+            
+            <div id="versus_2"> 
+        <div class="hero_g a_effacer" id="versus_heros_1"><img src="img/MrMAc.png" width="100%" height="100%"></div>
+        <div class="hero_g a_effacer" id="versus_heros_2"><img src="img/Saiit.png" width="100%" height="100%"></div>
+        <div class="hero_g a_effacer" id="versus_heros_3"><img src="img/Oizo.png" width="100%" height="100%"></div>
+        <div class="hero_g a_effacer" id="versus_heros_4"><img src="img/Niinja.png" width="100%" height="100%"></div>
+        <div class="hero_g a_effacer" id="versus_heros_5"><img src="MrBacon-perso.png" width="100%" height="100%"></div>            </div>
+            
+            <div id="bouton"> <img class="bouton" src ="start.png" width="200px" heigth="200px"></div>
 
-    </div>
+        </div>
+
+
+
 
     <div id="score" class="a_effacer">
         <div id="score_j1" class="score_j1">.</div>
         <div id="score_cpu" class="score_cpu">.</div>
     </div>
 
-    <div id="combat" class="a_effacer">
-        <div class="style a_effacer orange" id="combat_cpu_1"></div>
-        <div class="style a_effacer jaune" id="combat_cpu_2"></div>
-        <div class="style a_effacer rouge" id="combat_cpu_3"></div>
-        <div class="style a_effacer vert" id="combat_cpu_4"></div>
-        <div class="style a_effacer bleu" id="combat_cpu_5"></div>
+   <div id="combat" class="a_effacer combat">
+        <div class="combat_left a_effacer " id="cpu_heros_1"><img src="img/GIF PERSOS/Mr Macintosh/Macinstosh-g.gif" width="100%" height="100%"></div>
+        <div class="combat_left a_effacer " id="cpu_heros_2"><img src="img/GIF PERSOS/Saitama/Saitama-g.gif" width="100%" height="100%"></div>
+        <div class="combat_left a_effacer " id="cpu_heros_3"><img src="img/GIF PERSOS/Mr Oizo/Oizo-g.gif" width="100%" height="100%"></div>
+        <div class="combat_left a_effacer " id="cpu_heros_4"><img src="img/GIF PERSOS/Ninja-d.gif" width="100%" height="100%"></div>
+        <div class="combat_left a_effacer " id="cpu_heros_5"><img src="img/GIF PERSOS/MrBacon.gif" width="100%" height="100%"></div>
+        <div class="combat_right a_effacer " id="combat_heros_1"><img src="img/GIF PERSOS/Mr Macintosh/Macinstosh.gif" width="100%" height="100%"></div>
+        <div class="combat_right a_effacer " id="combat_heros_2"><img src="img/GIF PERSOS/Saitama/Saitama-d.gif" width="100%" height="100%"></div>
+        <div class="combat_right a_effacer " id="combat_heros_3"><img src="img/GIF PERSOS/Mr Oizo/OIzo-d.gif" width="100%" height="100%"></div>
+        <div class="combat_right a_effacer " id="combat_heros_4"><img src="img/GIF PERSOS/Ninja-g.gif" width="100%" height="100%"></div>
+        <div class="combat_right a_effacer " id="combat_heros_5"><img src="img/GIF PERSOS/MrBacon-g.gif" width="100%" height="100%"></div>
 
-        <div class="style a_effacer orange" id="combat_heros_1"></div>
-        <div class="style a_effacer jaune" id="combat_heros_2"></div>
-        <div class="style a_effacer rouge" id="combat_heros_3"></div>
-        <div class="style a_effacer vert" id="combat_heros_4"></div>
-        <div class="style a_effacer bleu" id="combat_heros_5"></div>
         <div id="total_arme_joueur"></div>
         <div id="total_arme_cpu"></div>
-        <button id="reflechir" onclick="reflechir()">réfléchir</button>
-        <button id="coder">coder</button>
-        <button id="manger">manger</button>
-        <button id="dormir">dormir</button>
+        <div class="btn">
+        <button class="vert  style_button" id="reflechir" onclick="reflechir()">réfléchir</button>
+        <button class=" style_button" id="coder">coder</button>
+        <button class=" style_button"id="manger">manger</button>
+        <button class=" style_button"id="dormir">dormir</button>
+      </div>
     </div>
 
     <div id="perdu" class="a_effacer">
@@ -250,7 +231,7 @@
         </tr>
 
         <br />
-        <button id="fuck" onclick="rejouer()">Rejouer</button>
+        <button id="fuck" class="a_effacer" onclick="rejouer()">Rejouer</button>
         </div>
 
 </body>

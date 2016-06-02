@@ -4,13 +4,15 @@ function init() {
     heros_liste = ["heros_1","heros_2","heros_3","heros_4","heros_5"];
     armes = ["aucune", "aucune"];
     armes_cpu = ["armes_1", "armes_2", "armes_3", "armes_4", "armes_5", "armes_6", "armes_7"];
-    background = ["1.png", "2.png", "3.png" , "4.png" ,"5.png"];
+     background = ["WallStreet-City.gif", "Milan-City.gif", "Marseille.jpg" , "Japan-City.gif" ,"EREBOR-Ciity.gif"];
     niveau = 1;
     bt_reflechir = document.getElementById('reflechir');
     bt_coder = document.getElementById('coder');
     bt_manger = document.getElementById('manger');
     bt_dormir = document.getElementById('dormir');
     bt_perdu = document.getElementById('perdu');
+            document.body.style.backgroundImage = "url('img/menu2.jpg')";
+        document.body.style.backgroundSize = "100% 100vh";
     stage_1 = [];
     stage_1_cpu = [];
     stage_2 = [];
@@ -61,6 +63,7 @@ function valider_heros() {
         console.log(heros_liste);
         document.getElementById('liste_armes').classList.remove('a_effacer');
     document.getElementById('liste_heros').classList.add('a_effacer');
+        document.getElementById('ch_heros').classList.add('a_effacer');
         document.body.style.backgroundImage = "url('img/fond-arme.jpg')";
         document.body.style.backgroundSize = "100vh 100vh";
         document.getElementById('bouton_armes').classList.remove('a_effacer');
@@ -80,7 +83,7 @@ function valider_armes() {
         /*document.getElementById('arme_diff').classList.remove('a_effacer');*/
     } else {
         document.getElementById('liste_armes').classList.add('a_effacer');
-        document.getElementById('versus').classList.remove('a_effacer');
+        document.getElementById('versus').removeAttribute("style");
         document.getElementById("chargement_"+heros[0]).classList.remove('a_effacer');
         document.getElementById("versus_"+heros_liste[0]).classList.remove('a_effacer');
         document.getElementById('bouton_armes').classList.add('a_effacer');
@@ -93,17 +96,21 @@ function valider_armes() {
     }
 }
 //-----------------------------------------------------------------------------CHARGEMENT
+        
 function chargement() {
  puissance();
     setTimeout(function () {
         document.getElementById("versus_"+heros_liste[0]).classList.add('a_effacer');
-        document.getElementById('versus').classList.add('a_effacer');
+        document.getElementById("cpu_"+heros_liste[0]).classList.remove('a_effacer');
+       document.getElementById('versus').style.display = "none";
         document.getElementById('combat').classList.remove('a_effacer');
-        document.getElementById('total_arme_cpu').innerHTML="Puissance arme:"+(weapon_1_cpu + weapon_2_cpu);
-        document.getElementById('total_arme_joueur').innerHTML="Puissance arme:"+(weapon_1+ weapon_2);
+        document.getElementById("combat_"+heros[0]).classList.remove('a_effacer');
+        document.getElementById('total_arme_cpu').innerHTML="Puissance arme : "+(weapon_1_cpu + weapon_2_cpu);
+        document.getElementById('total_arme_joueur').innerHTML="Puissance arme : "+(weapon_1+ weapon_2); 
 //-----------------------------------------------------------------------------ARMES/FOND ALEATOIRE
         var url = 'img/';
         document.body.style.backgroundImage = 'url('+ url + background[0] + ')';
+        document.body.style.backgroundSize = "100% 100vh";
         background.shift();
         console.log(background);
         melanger(armes_cpu);
@@ -217,7 +224,7 @@ function reflechir() {
     bt_coder.setAttribute("onClick", "coder()");
     bt_reflechir.removeAttribute("onclick");
     bt_coder.style.backgroundColor = "green";
-    bt_reflechir.style.backgroundColor = "";
+     bt_reflechir.classList.remove('vert');
 }
 
 function coder() {
@@ -374,7 +381,7 @@ function next(){
     console.log(niveau);
         
         
-        
+        document.getElementById("cpu_"+heros_liste[0]).classList.add('a_effacer');
              heros_liste.shift();
            document.getElementById("chargement_"+heros[0]).classList.remove('a_effacer');
         document.getElementById("versus_"+heros_liste[0]).classList.remove('a_effacer');
@@ -399,6 +406,16 @@ function next(){
         
         document.getElementById('stage1').innerHTML = stage_1[0];
         document.getElementById('stage1cpu').innerHTML = stage_1_cpu[0];
+        document.getElementById('stage1').innerHTML = stage_1[1];
+        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[1];
+        document.getElementById('stage1').innerHTML = stage_1[2];
+        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[2];
+        document.getElementById('stage1').innerHTML = stage_1[3];
+        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[3];
+        document.getElementById('stage1').innerHTML = stage_1[4];
+        document.getElementById('stage1cpu').innerHTML = stage_1_cpu[4];
+        
+    
         }   
     }
 
